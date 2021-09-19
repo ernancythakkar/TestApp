@@ -35,9 +35,9 @@ class AlbumViewModel(application: Application) : AndroidViewModel(application) {
         showLoader.value = true
         albumRepository.getAlbums(
             {
-                //Hide loading and update album data
+                //Hide loading and update album data sorted by title
                 showLoader.value = false
-                albums.value = it
+                albums.value = it.sortedBy { album -> album.title }
             }, {
                 //Hide loading and show error
                 showLoader.value = false
