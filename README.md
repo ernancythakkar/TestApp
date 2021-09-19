@@ -19,6 +19,7 @@ ViewModel
 ConstraintLayout
 
 Other technologies used:
-Retrofit
-OkHttp
-Coroutines
+Retrofit : For Network calls
+Architecture : MVVM
+Coroutines for background operations like fetching network response
+Live Data : To notify view for change
