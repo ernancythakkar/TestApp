@@ -7,6 +7,7 @@ import com.android.testapp.repository.remote.RestClient
 import com.android.testapp.repository.remote.ResultWrapper
 import com.android.testapp.repository.remote.SafeCallGenerator
 import com.android.testapp.repository.model.ModelAlbum
+import com.android.testapp.testing.OpenForTesting
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,6 +20,7 @@ import retrofit2.Response
  * @param webService Remote source for albums.
  * @param prefsManager Local cache source for albums.
  */
+@OpenForTesting
 class AlbumRepository private constructor(
     private val webService: API,
     private val prefsManager: PrefsManager
@@ -101,3 +103,4 @@ class AlbumRepository private constructor(
         }
     }
 }
+
